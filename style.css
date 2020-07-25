@@ -8,7 +8,7 @@
   left: 0;
   background-color: #f1f1f1;
   overflow: auto;
-  padding: 16px;
+  padding: 5px;
 }
 
 /* Sidebar links */
@@ -59,7 +59,12 @@
     position: relative;
   }
   .sidenav a {
-    float: left;
+    float: none;
+    text-align: right;
+    padding: 15px;
+  }
+  #topNavbar a {
+    padding: 15px;
   }
   .main {
     margin-left: 0;
