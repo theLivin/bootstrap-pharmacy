@@ -1,3 +1,52 @@
+:root {
+  --primary-color: #1b5022;
+  --secondary-color: #555;
+  --tertiary-color: #f1f1f1;
+  --medium: #818181;
+  --bright: #ffffff;
+  --low: green;
+}
+
+/* by elements */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* by ids */
+#logo {
+  color: var(--low);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#topNavbar a:not(.disabled) {
+  color: var(--bright);
+}
+
+#topNavbar a:hover {
+  background-color: var(--bright);
+  color: var(--primary-color);
+}
+
+/* by classes */
+.navbar.bg-primary {
+  background-color: var(--primary-color) !important;
+}
+
+.card,
+.jumbotron {
+  box-shadow: -1px 1px 5px var(--primary-color);
+}
+
+.jumbotron {
+  background-color: var(--tertiary-color) !important;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+.main {
+  margin-left: 160px;
+  padding: 0px;
+}
+
 /* The side navigation menu */
 .sidenav {
   height: 100%;
@@ -6,7 +55,7 @@
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #f1f1f1;
+  background-color: var(--tertiary-color);
   overflow: auto;
   padding: 5px;
 }
@@ -16,41 +65,23 @@
   padding: 6px 8px 6px 15px;
   text-decoration: none;
   font-size: 16px;
-  color: #818181;
+  color: var(--medium);
   display: block;
 }
 
 /* Active/current link */
 .sidenav a:active {
-  background-color: #7a8bd8;
-  color: white;
+  background-color: var(---primary-color);
+  color: var(--bright);
 }
 
 /* Links on mouse-over */
-.sidenav a:hover:not(.active) {
-  background-color: #555;
-  color: white;
+#sideBar a:hover:not(.active) {
+  background-color: var(--secondary-color);
+  color: var(--bright);
 }
 
-/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-.main {
-  margin-left: 160px;
-  padding: 0px;
-}
-
-#topNavbar a:not(.disabled) {
-  color: white;
-}
-
-#topNavbar a:hover {
-  background-color: white;
-  color: blue;
-}
-
-.card {
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.459);
-}
-
+/* Media Queries */
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 700px) {
   .sidenav {
